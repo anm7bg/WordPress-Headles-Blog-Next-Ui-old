@@ -999,7 +999,7 @@ __turbopack_esm__({
 __turbopack_esm__({
     "apiUrl": ()=>apiUrl
 });
-const apiUrl = assertValue(process.env.NEXT_PUBLIC_WORDPRESS_API_URL, 'Missing environment variable: API_URL');
+const apiUrl = assertValue(("TURBOPACK compile-time value", "https://avto.powweb.space/graphapi"), 'Missing environment variable: API_URL');
 function assertValue(v, errorMessage) {
     if (v === undefined) {
         throw new Error(errorMessage);
@@ -1050,7 +1050,8 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$base$2e$ts__$5b$app$2
 ;
 async function getPosts() {
     const data = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$base$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["fetchAPI"])(`query FetchPosts {
-        posts {
+      category(id: "dGVybToxNw==") {
+        posts(first: 100) {
           nodes {
             excerpt
             featuredImage {
@@ -1060,12 +1061,14 @@ async function getPosts() {
             }
             slug
             title
+            content
           }
         }
-      }`);
-    return data?.posts?.nodes;
+      }
+    }`);
+    return data?.category?.posts?.nodes;
 }
-async function getPostBySlug(slug) {
+async function getPostBySlug(postSlug) {
     const data = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$base$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["fetchAPI"])(`query GetPost($id: ID = "") {
     post(id: $id, idType: SLUG) {
       content
@@ -1079,7 +1082,7 @@ async function getPostBySlug(slug) {
     }
   }`, {
         variables: {
-            id: slug
+            id: postSlug
         }
     });
     return data?.post;

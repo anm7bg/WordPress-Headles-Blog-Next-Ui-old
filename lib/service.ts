@@ -1,10 +1,37 @@
 import { fetchAPI } from "./base";
 
 
+// export async function getBlogs() {
+//   const data = await fetchAPI(
+//     `query FetchPosts {
+//       category(id: "dGVybToxMQ==") {
+//         posts(first: 100, where: {orderby: {field: DATE, order: DESC}}) {
+//           nodes {
+//             excerpt
+//             featuredImage {
+//               node {
+//                 sourceUrl
+//               }
+//             }
+//             slug
+//             title
+//             content
+//               url {
+//               projectLink
+//             }
+//           }
+//         }
+//       }
+//     }`,
+//   );
+//   return data?.category?.posts?.nodes;
+// }
+
 export async function getPosts() {
   const data = await fetchAPI(
     `query FetchPosts {
-        posts {
+      category(id: "dGVybToxNw==") {
+        posts(first: 100) {
           nodes {
             excerpt
             featuredImage {
@@ -14,37 +41,16 @@ export async function getPosts() {
             }
             slug
             title
+            content
           }
         }
-      }`,
-    // {
-      // variables: {
-        // first,
-      // },
-    // }
-    // `query NewQuery {
-    //   category(id: "dGVybToz") {
-    //     id
-    //     posts {
-    //       nodes {
-    //         excerpt
-    //         featuredImage {
-    //           node {
-    //             sourceUrl
-    //           }
-    //         }
-    //         slug
-    //         title
-    //       }
-    //     }
-    //   }
-    // }`
+      }
+    }`,
   );
-
-  return data?.posts?.nodes;
+  return data?.category?.posts?.nodes;
 }
 
-export async function getPostBySlug(slug: string) {
+export async function getPostBySlug(postSlug: string) {
   const data = await fetchAPI(
     `query GetPost($id: ID = "") {
     post(id: $id, idType: SLUG) {
@@ -60,7 +66,7 @@ export async function getPostBySlug(slug: string) {
   }`,
     {
       variables: {
-        id: slug,
+        id: postSlug,
       },
     }
   );
