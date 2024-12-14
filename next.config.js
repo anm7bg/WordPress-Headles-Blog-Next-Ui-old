@@ -7,14 +7,6 @@ const nextConfig = {
         remotePatterns: [
           {
             protocol: "https",
-            hostname: "avto.powweb.space",
-          },
-          {
-            protocol: "https",
-            hostname: "powweb.space",
-          },
-          {
-            protocol: "https",
             hostname: "i0.wp.com",
           },
           {
