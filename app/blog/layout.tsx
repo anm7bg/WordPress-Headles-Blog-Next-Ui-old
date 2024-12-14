@@ -1,3 +1,9 @@
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Авто новини | Потопете в света на автомобилите с Автопрес БГ!",
+  description: "Категорията Авто новини включва актуални информации и новини свързани с автомобилната индустрия. Тук ще намерите различни статии, които обхващат ...",
+};
 export default function BlogLayout({
   children,
 }: {

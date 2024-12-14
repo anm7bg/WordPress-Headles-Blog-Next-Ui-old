@@ -1,6 +1,14 @@
 const CHUNK_PUBLIC_PATH = "server/app/blog/page.js";
 const runtime = require("../../chunks/ssr/[turbopack]_runtime.js");
-runtime.loadChunk("server/chunks/ssr/node_modules_5f4626._.js");
-runtime.loadChunk("server/chunks/ssr/[root of the server]__19748a._.js");
+runtime.loadChunk("server/chunks/ssr/node_modules_next_dist_101e1c._.js");
+runtime.loadChunk("server/chunks/ssr/[root of the server]__adba9d._.js");
+runtime.loadChunk("server/chunks/ssr/node_modules_3ed87d._.js");
+runtime.loadChunk("server/chunks/ssr/[root of the server]__65ad27._.js");
+runtime.loadChunk("server/chunks/ssr/[root of the server]__4ec80e._.css");
+runtime.loadChunk("server/chunks/ssr/app_error_tsx_b07d46._.js");
+runtime.loadChunk("server/chunks/ssr/node_modules_next_662325._.js");
+runtime.loadChunk("server/chunks/ssr/app_blog_layout_tsx_309e4c._.js");
+runtime.loadChunk("server/chunks/ssr/node_modules_c4c51e._.js");
+runtime.loadChunk("server/chunks/ssr/_5e2e9d._.js");
 runtime.getOrInstantiateRuntimeModule("[project]/.next-internal/server/app/blog/page/actions.js [app-rsc] (ecmascript)", CHUNK_PUBLIC_PATH);
-module.exports = runtime.getOrInstantiateRuntimeModule("[project]/node_modules/next/dist/esm/build/templates/app-page.js?page=/blog/page { COMPONENT_0 => \"[project]/app/layout.tsx [app-rsc] (ecmascript, Next.js server component)\", COMPONENT_1 => \"[project]/app/error.tsx [app-rsc] (ecmascript, Next.js server component)\", COMPONENT_2 => \"[project]/node_modules/next/dist/client/components/not-found-error.js [app-rsc] (ecmascript, Next.js server component)\", COMPONENT_3 => \"[project]/app/blog/layout.tsx [app-rsc] (ecmascript, Next.js server component)\", COMPONENT_4 => \"[project]/app/blog/page.tsx [app-rsc] (ecmascript, Next.js server component)\" } [app-rsc] (ecmascript) <facade>", CHUNK_PUBLIC_PATH).exports;
+module.exports = runtime.getOrInstantiateRuntimeModule("[project]/node_modules/next/dist/esm/build/templates/app-page.js?page=/blog/page { MODULE_0 => \"[project]/app/layout.tsx [app-rsc] (ecmascript, Next.js server component)\", MODULE_1 => \"[project]/app/error.tsx [app-rsc] (ecmascript, Next.js server component)\", MODULE_2 => \"[project]/node_modules/next/dist/client/components/not-found-error.js [app-rsc] (ecmascript, Next.js server component)\", MODULE_3 => \"[project]/app/blog/layout.tsx [app-rsc] (ecmascript, Next.js server component)\", MODULE_4 => \"[project]/app/blog/page.tsx [app-rsc] (ecmascript, Next.js server component)\" } [app-rsc] (ecmascript)", CHUNK_PUBLIC_PATH).exports;

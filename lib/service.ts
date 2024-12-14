@@ -30,7 +30,29 @@ import { fetchAPI } from "./base";
 export async function getPosts() {
   const data = await fetchAPI(
     `query FetchPosts {
-      category(id: "dGVybToxNw==") {
+        posts(first: 100) {
+          nodes {
+            excerpt
+            featuredImage {
+              node {
+                sourceUrl
+              }
+            }
+            slug
+            title
+            content
+          }
+        }
+      
+    }`,
+  );
+  return data?.posts?.nodes;
+}
+
+export async function getZaAvtomobilaPosts() {
+  const data = await fetchAPI(
+    `query FetchPosts {
+      category(id: "dGVybToyMQ==") {
         posts(first: 100) {
           nodes {
             excerpt
@@ -47,6 +69,55 @@ export async function getPosts() {
       }
     }`,
   );
+
+  return data?.category?.posts?.nodes;
+}
+
+export async function getMotornoMasloPosts() {
+  const data = await fetchAPI(
+    `query FetchPosts {
+      category(id: "dGVybToxNA==") {
+        posts(first: 100) {
+          nodes {
+            excerpt
+            featuredImage {
+              node {
+                sourceUrl
+              }
+            }
+            slug
+            title
+            content
+          }
+        }
+      }
+    }`,
+  );
+
+  return data?.category?.posts?.nodes;
+}
+
+export async function getTuningNoviniPosts() {
+  const data = await fetchAPI(
+    `query FetchPosts {
+      category(id: "dGVybToxNA==") {
+        posts(first: 100) {
+          nodes {
+            excerpt
+            featuredImage {
+              node {
+                sourceUrl
+              }
+            }
+            slug
+            title
+            content
+          }
+        }
+      }
+    }`,
+  );
+
   return data?.category?.posts?.nodes;
 }
 

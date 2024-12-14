@@ -5,7 +5,7 @@ export interface blogCard {
     rendered: string;
     excerpt: any;
     content: any;
-    slug: string;
+    // slug: string;
     featuredImage: any
     // rendered: any;
 }

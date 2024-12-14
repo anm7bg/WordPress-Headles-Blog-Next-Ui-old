@@ -1,5 +1,5 @@
  
-import { blogCard } from "@/app/lib/interface";
+import { blogCard } from "@/lib/interface";
 import { getPostBySlug, getPosts } from "@/lib/service";
 
 import Image from "next/image";
@@ -32,15 +32,14 @@ export async function generateStaticParams() {
 // 	return post;
 // }
 
-const Page = async ( {params}: {params: {postSlug: string}} ) => {
+const Page = async ( {params}: {params: Promise<{postSlug: string}>} ) => {
+	const { postSlug } = await params;
+	// console.log("Params")
+	// console.log(params)
 
-	console.log("Params")
-	console.log(params)
-
-	const post: blogCard  = await getPostBySlug(params.postSlug);
-
-    console.log('Post2')
-    console.log(post)
+	const post: blogCard  = await getPostBySlug(postSlug);
+    // console.log('Post2')
+    // console.log(post)
 
 	// const postContent = post.content
 	// console.log("postContent")

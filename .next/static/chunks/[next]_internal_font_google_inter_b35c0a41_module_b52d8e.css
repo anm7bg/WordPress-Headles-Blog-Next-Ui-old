@@ -1,6 +1,6 @@
 /* [next]/internal/font/google/inter_b35c0a41.module.css [app-client] (css) */
 @font-face {
-  font-family: __Inter_b35c0a;
+  font-family: Inter;
   font-style: normal;
   font-weight: 100 900;
   font-display: swap;
@@ -9,7 +9,7 @@
 }
 
 @font-face {
-  font-family: __Inter_b35c0a;
+  font-family: Inter;
   font-style: normal;
   font-weight: 100 900;
   font-display: swap;
@@ -18,7 +18,7 @@
 }
 
 @font-face {
-  font-family: __Inter_b35c0a;
+  font-family: Inter;
   font-style: normal;
   font-weight: 100 900;
   font-display: swap;
@@ -27,7 +27,7 @@
 }
 
 @font-face {
-  font-family: __Inter_b35c0a;
+  font-family: Inter;
   font-style: normal;
   font-weight: 100 900;
   font-display: swap;
@@ -36,7 +36,7 @@
 }
 
 @font-face {
-  font-family: __Inter_b35c0a;
+  font-family: Inter;
   font-style: normal;
   font-weight: 100 900;
   font-display: swap;
@@ -45,7 +45,7 @@
 }
 
 @font-face {
-  font-family: __Inter_b35c0a;
+  font-family: Inter;
   font-style: normal;
   font-weight: 100 900;
   font-display: swap;
@@ -54,7 +54,7 @@
 }
 
 @font-face {
-  font-family: __Inter_b35c0a;
+  font-family: Inter;
   font-style: normal;
   font-weight: 100 900;
   font-display: swap;
@@ -63,7 +63,7 @@
 }
 
 @font-face {
-  font-family: __Inter_Fallback_b35c0a;
+  font-family: Inter Fallback;
   src: local(Arial);
   ascent-override: 90.49%;
   descent-override: 22.56%;
@@ -72,12 +72,12 @@
 }
 
 .inter_b35c0a41-module__Y0D1la__className {
-  font-family: __Inter_b35c0a, __Inter_Fallback_b35c0a;
+  font-family: Inter, Inter Fallback;
   font-style: normal;
 }
 
 .inter_b35c0a41-module__Y0D1la__variable {
-  --font-sans: "__Inter_b35c0a", "__Inter_Fallback_b35c0a";
+  --font-sans: "Inter", "Inter Fallback";
 }
 
 /*# sourceMappingURL=%5Bnext%5D_internal_font_google_inter_b35c0a41_module_b52d8e.css.map*/
