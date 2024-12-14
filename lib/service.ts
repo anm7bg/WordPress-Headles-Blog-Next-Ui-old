@@ -1,32 +1,5 @@
 import { fetchAPI } from "./base";
 
-
-// export async function getBlogs() {
-//   const data = await fetchAPI(
-//     `query FetchPosts {
-//       category(id: "dGVybToxMQ==") {
-//         posts(first: 100, where: {orderby: {field: DATE, order: DESC}}) {
-//           nodes {
-//             excerpt
-//             featuredImage {
-//               node {
-//                 sourceUrl
-//               }
-//             }
-//             slug
-//             title
-//             content
-//               url {
-//               projectLink
-//             }
-//           }
-//         }
-//       }
-//     }`,
-//   );
-//   return data?.category?.posts?.nodes;
-// }
-
 export async function getPosts() {
   const data = await fetchAPI(
     `query FetchPosts {
@@ -49,7 +22,7 @@ export async function getPosts() {
   return data?.posts?.nodes;
 }
 
-export async function getZaAvtomobilaPosts() {
+export async function getZaCatPosts() {
   const data = await fetchAPI(
     `query FetchPosts {
       category(id: "dGVybToyMQ==") {
